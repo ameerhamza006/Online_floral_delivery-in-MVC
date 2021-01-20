@@ -1,0 +1,27 @@
+﻿@model Online_floral_delivery.Models.product
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/shared/masterpage.cshtml";
+}
+<div class="container">
+    <br />
+    <h3>AddProduct</h3>
+    <br />
+    @using (Html.BeginForm("AddProduct", "backend", FormMethod.Post, new { enctype = "multipart/form-data"}))
+    {
+        @Html.LabelFor(a => a.product_name)
+        @Html.TextBoxFor(a => a.product_name, new { @class = "form-control" })
+
+        @Html.LabelFor(a => a.price)
+        @Html.TextBoxFor(a => a.price, new { @class = "form-control" })
+
+        @Html.LabelFor(a => a.product_image)
+        <input type="file" name="p" class="form-control" />
+
+        <label>Category Name</label>
+        @Html.DropDownList("product_category_id", null, new { @class = "form-control" })
+        <br />
+        <input type="submit" name="Add Product" class="btn btn-info" />
+    }
+    @ViewBag.message
+</div>

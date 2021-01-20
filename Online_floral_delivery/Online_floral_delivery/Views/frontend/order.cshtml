@@ -1,0 +1,157 @@
+﻿@model Online_floral_delivery.Models.billingg
+@{
+    ViewBag.Title = "order";
+    Layout = "~/Views/shared/webMasterPage.cshtml";
+}
+
+
+<div class="breadcrumb-area gray-bg">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a href="@Url.Action("Index", "frontend")">Home</a></li>
+                <li class="active"> login / Register </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="login-register-area pt-70 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                <div class="login-register-wrapper" style="margin-right:100px;">
+                    <div class="login-register-tab-list nav">
+                        @*<a class="" data-toggle="tab" href="#lg1">
+                <h4> login </h4>
+            </a>*@
+                        <a data-toggle="tab" href="#lg2" class="active">
+                            <h4> Order Your Shopping </h4>
+                        </a>
+                    </div>
+                    <div class="tab-content">
+
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12 ml-auto mr-auto">
+                                <div class="login-form-container" style="margin-bottom:50px;">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <h5><b>Products</b></h5>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h5><b> Quantity</b> </h5>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h5><b> Price </b></h5>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="row">
+                                        @{
+                                            int amount = 0;
+
+                                            foreach (var item in ViewBag.aa)
+                                            {
+                                                var p = new Online_floral_delivery.Models.floral_deliveryEntities8().products.ToList();
+                                                foreach (var pro in p)
+                                                {
+                                                    if (item.c_id == pro.id)
+                                                    {
+                                                        amount = item.c_qty * Convert.ToInt32(pro.price);
+                                                        <div class="col-lg-4">
+                                                            <h5><b> @pro.product_name:</b></h5>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <h5> @item.c_qty</h5>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <h5> Rs.@amount</h5>
+                                                        </div>
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    </div>
+                                    <div class="row">
+                                    
+                                        <h5 class="text-right text-danger" style="margin-top:40px;">Total: @ViewBag.m</h5>
+                                    </div>
+                                </div>
+                            <label></label>
+                            <br />
+                            </div>
+                                <div id="lg2" class="tab-pane active">
+                                    <div class="login-form-container">
+                                        <div class="login-register-form">
+
+                                            @using (Html.BeginForm("order", "frontend", FormMethod.Post))
+                                            {
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_firstname, new { @placeholder = "First Name" })
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_lastname, new { @placeholder = "Last Name" })
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_email, new { @placeholder = "Email" })
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_number, new { @placeholder = "phone Number" })
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_city, new { @placeholder = "City" })
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_country, new { @placeholder = "Country" })
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_street, new { @placeholder = "Street" })
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        @Html.TextBoxFor(a => a.bill_postcode, new { @placeholder = "Postcode" })
+                                                    </div>
+                                                </div>
+
+                                                @Html.TextBoxFor(a => a.bill_address, new { @placeholder = "Address" })
+                                                <input type="hidden" name="bill_date" value="@DateTime.Now" />
+                                                <input type="hidden" name="bill_fk_reg" value="@Session["useremail"]" />
+                                                <div class="button-box">
+                                                    <button type="submit"><span>Order Now</span></button>
+                                                </div>
+                                            }
+
+                                            @ViewBag.message
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+</div>
+
+
+

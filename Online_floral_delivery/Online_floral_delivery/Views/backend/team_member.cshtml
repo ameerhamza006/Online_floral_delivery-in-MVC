@@ -1,0 +1,52 @@
+﻿@model Online_floral_delivery.Models.team
+
+@{
+    ViewBag.Title = "team_member";
+    Layout = "~/Views/shared/masterpage.cshtml";
+}
+
+<h2>team_member</h2>
+
+@using (Html.BeginForm("","",FormMethod.Post,new {enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>team</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.member_name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.member_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.member_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.member_post, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.member_post, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.member_post, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="file" name="snaps"class = "control-label col-md-2" />
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.images, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.images, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="floral_deliveryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="billingg">
+          <Key>
+            <PropertyRef Name="bill_id" />
+          </Key>
+          <Property Name="bill_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bill_fk_reg" Type="int" />
+          <Property Name="bill_firstname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_lastname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_number" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_city" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_country" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_street" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_postcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_payment" Type="nvarchar" MaxLength="50" />
+          <Property Name="bill_date" Type="date" />
+        </EntityType>
+        <EntityType Name="cart">
+          <Key>
+            <PropertyRef Name="cart_id" />
+          </Key>
+          <Property Name="cart_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cart_qty" Type="int" />
+          <Property Name="cart_fk_reg" Type="int" />
+          <Property Name="cart_fk_pro" Type="int" />
+        </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="category id" />
+          </Key>
+          <Property Name="category id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="category name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="subj" Type="varchar" MaxLength="100" />
+          <Property Name="msg" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product name" Type="varchar" MaxLength="50" />
+          <Property Name="price" Type="numeric" Precision="25" Scale="0" />
+          <Property Name="product image" Type="varchar(max)" />
+          <Property Name="product category id" Type="int" />
+        </EntityType>
+        <EntityType Name="registeration">
+          <Key>
+            <PropertyRef Name="cus_id" />
+          </Key>
+          <Property Name="cus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="F_name" Type="varchar" MaxLength="50" />
+          <Property Name="L_name" Type="varchar" MaxLength="50" />
+          <Property Name="Dob" Type="date" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="P_No" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="role" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__billingg__bill_f__36B12243">
+          <End Role="registeration" Type="Self.registeration" Multiplicity="0..1" />
+          <End Role="billingg" Type="Self.billingg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="registeration">
+              <PropertyRef Name="cus_id" />
+            </Principal>
+            <Dependent Role="billingg">
+              <PropertyRef Name="bill_fk_reg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__cart__cart_fk_pr__2E1BDC42">
+          <End Role="product" Type="Self.product" Multiplicity="0..1" />
+          <End Role="cart" Type="Self.cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cart">
+              <PropertyRef Name="cart_fk_pro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__cart__cart_fk_re__2D27B809">
+          <End Role="registeration" Type="Self.registeration" Multiplicity="0..1" />
+          <End Role="cart" Type="Self.cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="registeration">
+              <PropertyRef Name="cus_id" />
+            </Principal>
+            <Dependent Role="cart">
+              <PropertyRef Name="cart_fk_reg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__product__product__267ABA7A">
+          <End Role="category" Type="Self.category" Multiplicity="0..1" />
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="category id" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="product category id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="floral_deliveryModelStoreContainer">
+          <EntitySet Name="billingg" EntityType="Self.billingg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cart" EntityType="Self.cart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="registeration" EntityType="Self.registeration" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__billingg__bill_f__36B12243" Association="Self.FK__billingg__bill_f__36B12243">
+            <End Role="registeration" EntitySet="registeration" />
+            <End Role="billingg" EntitySet="billingg" />
+          </AssociationSet>
+          <AssociationSet Name="FK__cart__cart_fk_pr__2E1BDC42" Association="Self.FK__cart__cart_fk_pr__2E1BDC42">
+            <End Role="product" EntitySet="product" />
+            <End Role="cart" EntitySet="cart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__cart__cart_fk_re__2D27B809" Association="Self.FK__cart__cart_fk_re__2D27B809">
+            <End Role="registeration" EntitySet="registeration" />
+            <End Role="cart" EntitySet="cart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__product__product__267ABA7A" Association="Self.FK__product__product__267ABA7A">
+            <End Role="category" EntitySet="category" />
+            <End Role="product" EntitySet="product" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="floral_deliveryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="category_id" />
+          </Key>
+          <Property Name="category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="products" Relationship="Self.FK__product__product__267ABA7A" FromRole="category" ToRole="product" />
+        </EntityType>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="subj" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="25" Scale="0" />
+          <Property Name="product_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="product_category_id" Type="Int32" />
+          <NavigationProperty Name="category" Relationship="Self.FK__product__product__267ABA7A" FromRole="product" ToRole="category" />
+          <NavigationProperty Name="carts" Relationship="floral_deliveryModel.FK__cart__cart_fk_pr__2E1BDC42" FromRole="product" ToRole="cart" />
+        </EntityType>
+        <EntityType Name="registeration">
+          <Key>
+            <PropertyRef Name="cus_id" />
+          </Key>
+          <Property Name="cus_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="F_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="L_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dob" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="P_No" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="carts" Relationship="floral_deliveryModel.FK__cart__cart_fk_re__2D27B809" FromRole="registeration" ToRole="cart" />
+          <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="billinggs" Relationship="floral_deliveryModel.FK__billingg__bill_f__36B12243" FromRole="registeration" ToRole="billingg" />
+        </EntityType>
+        <Association Name="FK__product__product__267ABA7A">
+          <End Role="category" Type="Self.category" Multiplicity="0..1" />
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="product_category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="floral_deliveryEntities8" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categories" EntityType="Self.category" />
+          <EntitySet Name="contacts" EntityType="Self.contact" />
+          <EntitySet Name="products" EntityType="Self.product" />
+          <EntitySet Name="registerations" EntityType="Self.registeration" />
+          <AssociationSet Name="FK__product__product__267ABA7A" Association="Self.FK__product__product__267ABA7A">
+            <End Role="category" EntitySet="categories" />
+            <End Role="product" EntitySet="products" />
+          </AssociationSet>
+          <EntitySet Name="carts" EntityType="floral_deliveryModel.cart" />
+          <AssociationSet Name="FK__cart__cart_fk_pr__2E1BDC42" Association="floral_deliveryModel.FK__cart__cart_fk_pr__2E1BDC42">
+            <End Role="product" EntitySet="products" />
+            <End Role="cart" EntitySet="carts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__cart__cart_fk_re__2D27B809" Association="floral_deliveryModel.FK__cart__cart_fk_re__2D27B809">
+            <End Role="registeration" EntitySet="registerations" />
+            <End Role="cart" EntitySet="carts" />
+          </AssociationSet>
+          <EntitySet Name="billinggs" EntityType="floral_deliveryModel.billingg" />
+          <AssociationSet Name="FK__billingg__bill_f__36B12243" Association="floral_deliveryModel.FK__billingg__bill_f__36B12243">
+            <End Role="registeration" EntitySet="registerations" />
+            <End Role="billingg" EntitySet="billinggs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="cart">
+          <Key>
+            <PropertyRef Name="cart_id" />
+          </Key>
+          <Property Name="cart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cart_qty" Type="Int32" />
+          <Property Name="cart_fk_reg" Type="Int32" />
+          <Property Name="cart_fk_pro" Type="Int32" />
+          <NavigationProperty Name="product" Relationship="floral_deliveryModel.FK__cart__cart_fk_pr__2E1BDC42" FromRole="cart" ToRole="product" />
+          <NavigationProperty Name="registeration" Relationship="floral_deliveryModel.FK__cart__cart_fk_re__2D27B809" FromRole="cart" ToRole="registeration" />
+        </EntityType>
+        <Association Name="FK__cart__cart_fk_pr__2E1BDC42">
+          <End Type="floral_deliveryModel.product" Role="product" Multiplicity="0..1" />
+          <End Type="floral_deliveryModel.cart" Role="cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cart">
+              <PropertyRef Name="cart_fk_pro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__cart__cart_fk_re__2D27B809">
+          <End Type="floral_deliveryModel.registeration" Role="registeration" Multiplicity="0..1" />
+          <End Type="floral_deliveryModel.cart" Role="cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="registeration">
+              <PropertyRef Name="cus_id" />
+            </Principal>
+            <Dependent Role="cart">
+              <PropertyRef Name="cart_fk_reg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="billingg">
+          <Key>
+            <PropertyRef Name="bill_id" />
+          </Key>
+          <Property Name="bill_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bill_fk_reg" Type="Int32" />
+          <Property Name="bill_firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bill_date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="registeration" Relationship="floral_deliveryModel.FK__billingg__bill_f__36B12243" FromRole="billingg" ToRole="registeration" />
+        </EntityType>
+        <Association Name="FK__billingg__bill_f__36B12243">
+          <End Type="floral_deliveryModel.registeration" Role="registeration" Multiplicity="0..1" />
+          <End Type="floral_deliveryModel.billingg" Role="billingg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="registeration">
+              <PropertyRef Name="cus_id" />
+            </Principal>
+            <Dependent Role="billingg">
+              <PropertyRef Name="bill_fk_reg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="floral_deliveryModelStoreContainer" CdmEntityContainer="floral_deliveryEntities8">
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="floral_deliveryModel.category">
+              <MappingFragment StoreEntitySet="category">
+                <ScalarProperty Name="category_id" ColumnName="category id" />
+                <ScalarProperty Name="category_name" ColumnName="category name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contacts">
+            <EntityTypeMapping TypeName="floral_deliveryModel.contact">
+              <MappingFragment StoreEntitySet="contact">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="subj" ColumnName="subj" />
+                <ScalarProperty Name="msg" ColumnName="msg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="floral_deliveryModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="product_name" ColumnName="product name" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="product_image" ColumnName="product image" />
+                <ScalarProperty Name="product_category_id" ColumnName="product category id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="registerations">
+            <EntityTypeMapping TypeName="floral_deliveryModel.registeration">
+              <MappingFragment StoreEntitySet="registeration">
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="cus_id" ColumnName="cus_id" />
+                <ScalarProperty Name="F_name" ColumnName="F_name" />
+                <ScalarProperty Name="L_name" ColumnName="L_name" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="P_No" ColumnName="P_No" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="carts">
+            <EntityTypeMapping TypeName="floral_deliveryModel.cart">
+              <MappingFragment StoreEntitySet="cart">
+                <ScalarProperty Name="cart_fk_pro" ColumnName="cart_fk_pro" />
+                <ScalarProperty Name="cart_fk_reg" ColumnName="cart_fk_reg" />
+                <ScalarProperty Name="cart_qty" ColumnName="cart_qty" />
+                <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="billinggs">
+            <EntityTypeMapping TypeName="floral_deliveryModel.billingg">
+              <MappingFragment StoreEntitySet="billingg">
+                <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+                <ScalarProperty Name="bill_payment" ColumnName="bill_payment" />
+                <ScalarProperty Name="bill_postcode" ColumnName="bill_postcode" />
+                <ScalarProperty Name="bill_address" ColumnName="bill_address" />
+                <ScalarProperty Name="bill_street" ColumnName="bill_street" />
+                <ScalarProperty Name="bill_country" ColumnName="bill_country" />
+                <ScalarProperty Name="bill_city" ColumnName="bill_city" />
+                <ScalarProperty Name="bill_email" ColumnName="bill_email" />
+                <ScalarProperty Name="bill_number" ColumnName="bill_number" />
+                <ScalarProperty Name="bill_lastname" ColumnName="bill_lastname" />
+                <ScalarProperty Name="bill_firstname" ColumnName="bill_firstname" />
+                <ScalarProperty Name="bill_fk_reg" ColumnName="bill_fk_reg" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

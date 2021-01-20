@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Online_floral_delivery.Models.cart>
+
+@{
+    ViewBag.Title = "cartlist";
+    Layout = "~/Views/shared/masterpage.cshtml";
+}
+
+<h2>cartlist</h2>
+
+<p>
+
+</p>
+<table class="table">
+    <tr>
+
+
+        <th>
+            User Email
+        </th>
+
+        <th>
+            Product_image
+        </th>
+
+        <th>
+            Product_Name
+        </th>
+
+        <th>
+            Quantity
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.registeration.Email)
+        </td>
+
+        <td>
+            <img src="~/img/@Url.Content(item.product.product_image)" width="100px" height="100px" />
+           
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.product.product_name)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.cart_qty)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cart_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cart_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cart_id })
+        </td>
+    </tr>
+}
+
+</table>

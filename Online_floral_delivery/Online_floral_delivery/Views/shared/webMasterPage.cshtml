@@ -1,0 +1,397 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from demo.devitems.com/phuler-v4/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Aug 2020 07:19:17 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Phuler - Flower eCommerce Bootstrap4 Template</title>
+    <meta name="description" content="">
+    <meta name="robots" content="noindex, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/webContent/assets/img/favicon.png">
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="~/webContent/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/animate.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/slick.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/chosen.min.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/style.css">
+    <link rel="stylesheet" href="~/webContent/assets/css/responsive.css">
+    <script src="~/webContent/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+   
+</head>
+<body>
+    <!-- header start -->
+    <header class="header-area clearfix">
+     
+        <div class="header-bottom transparent-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img alt="" src="~/webContent/assets/img/logo/logo.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-6">
+                        <div class="header-bottom-right">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul>
+                                        <li class="top-hover">
+                                            <a href="@Url.Action("Index","frontend")">Home</a>
+
+                                        </li>
+                                        <li><a href="@Url.Action("about","frontend")">About Us</a></li>
+                                        <li class="top-hover">
+                                            <a href="@Url.Action("shop","frontend")">Occasions <i class="ion-chevron-down"></i></a>
+                                            <ul class="submenu">
+
+                                                @{
+                                                    var a = new Online_floral_delivery.Models.floral_deliveryEntities8().categories.ToList();
+                                                }
+
+                                                <li><a href="@Url.Action("shop","frontend")">All ocassion</a></li>
+                                                @foreach (var item in a)
+                                                {
+                                                    <li><a href="@Url.Action("shops","frontend",new {id = item.category_id })">@item.category_name</a></li>
+
+                                                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            </ul>
+
+                                        <li class="top-hover">
+                                            <a href="@Url.Action("MyAccount","frontend")">My Account <i class="ion-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="@Url.Action("MyAccount","frontend")">My Account</a></li>
+                                                <li><a href="@Url.Action("login","frontend")">Register</a></li>
+                                                <li><a href="@Url.Action("register","frontend")">Login</a></li>
+                                                <li><a>@Session["useremail"]</a></li>
+                                                <li>@Html.ActionLink("Logout", "logout", "frontend")</li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="@Url.Action("contact","frontend")">Contact Us</a></li>
+                                        @if (Session["useremail"] != null)
+                                        {
+                                            <li><a href="@Url.Action("logout","frontend")">Logout</a></li>
+                                        }
+                                        else
+                                        {
+                                            <li><a href="@Url.Action("login","frontend")">Login</a></li>
+                                        }
+                                    </ul>
+                                </nav>
+                            </div>
+                            @*@if (ViewBag.a != null)
+                            {
+                                <div class="header-cart">
+                                    @{
+                                        int amount = 0;
+                                        int total = 0;
+                                        int count = 0;
+
+                                        foreach (var item in ViewBag.a)
+                                        {
+                                            var p = new Online_floral_delivery.Models.floral_deliveryEntities8().products.ToList();
+                                            foreach (var pro in p)
+                                            {
+                                                if (item.c_id == pro.id)
+                                                {
+                                                    amount = item.c_qty * Convert.ToInt32(pro.price);
+                                                    total += amount;
+                                                    count += item.c_id;
+
+                                                    <a href="#">
+                                                        <div class="cart-icon">
+                                                            <i class="ion-bag"></i>
+                                                            <span class="count-style">@count</span>
+                                                        </div>
+                                                        <div class="cart-text">
+                                                            <span class="digit">My Cart</span>
+                                                            <span>Rs.@total</span>
+                                                        </div>
+                                                    </a>
+                                                    <div class="shopping-cart-content">
+                                                        <ul>
+                                                            <li class="single-shopping-cart">
+                                                                <div class="shopping-cart-img">
+                                                                    <a href="#"><img alt="" src="~/img/@Url.Content(pro.product_image)"></a>
+                                                                </div>
+                                                                <div class="shopping-cart-title">
+                                                                    <h4><a href="#">@pro.product_name </a></h4>
+                                                                    <h6>Qty: @item.c_qty</h6>
+                                                                    <span>Rs.@amount</span>
+                                                                </div>
+                                                                <div class="shopping-cart-delete">
+                                                                    <a href="#"><i class="ion ion-close"></i></a>
+                                                                </div>
+                                                            </li>
+
+
+
+
+                                                        </ul>
+
+
+                                                        <div class="shopping-cart-total">
+                                                            <h4>Shipping : <span>Rs.200</span></h4>
+                                                            <h4>Total : <span class="shop-total">Rs.@total</span></h4>
+                                                        </div>
+
+
+                                                        <div class="shopping-cart-btn">
+                                                            <a href="@Url.Action("addtocart", "frontend")">view cart</a>
+                                                            <a href="@Url.Action("order", "frontend", new { amountt = total })">checkout</a>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            }
+                                        }
+                                    }
+                                </div>
+                            }*@
+
+                              
+                            </div>
+                        </div>
+                </div>
+               
+            </div>
+        </div>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+    
+    <footer class="footer-area pt-58 gray-bg-3">
+        <div class="footer-top gray-bg-3 pb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-widget footer-widget-red footer-black-color mb-40">
+                            <div class="footer-title mb-30">
+                                <h4>About Us</h4>
+                            </div>
+                            <div class="footer-about">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididun</p>
+                                <div class="footer-contact mt-20">
+                                    <ul>
+                                        <li>Address: 123 Main Street, Anytown, CA 12345 - USA.</li>
+                                        <li>Telephone: (012) 800 456 789-987 </li>
+                                        <li>Email: <a href="#">yourmail@example.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="social-icon">
+                                <ul>
+                                    <li><a class="facebook" href="#"><i class="ion-social-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="ion-social-twitter"></i></a></li>
+                                    <li><a class="instagram" href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                                    <li><a class="googleplus" href="#"><i class="ion-social-googleplus-outline"></i></a></li>
+                                    <li><a class="rss" href="#"><i class="ion-social-rss"></i></a></li>
+                                    <li><a class="dribbble" href="#"><i class="ion-social-dribbble-outline"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget mb-40">
+                            <div class="footer-title mb-30">
+                                <h4>Information</h4>
+                            </div>
+                            <div class="footer-content">
+                                <ul>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="#">Delivery Information</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                    <li><a href="#">Return Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget mb-40">
+                            <div class="footer-title mb-30">
+                                <h4>My Account</h4>
+                            </div>
+                            <div class="footer-content">
+                                <ul>
+                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="about-us.html">Order History</a></li>
+                                    <li><a href="wishlist.html">WishList</a></li>
+                                    <li><a href="#">Newsletter</a></li>
+                                    <li><a href="about-us.html">Order History</a></li>
+                                    <li><a href="#">International Orders</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-widget mb-40">
+                            <div class="footer-title mb-30">
+                                <h4>Join Our Newsletter Now</h4>
+                            </div>
+                            <div class="footer-newsletter">
+                                <p>Get E-mail updates about our latest shop and special offers.</p>
+                                <div id="mc_embed_signup" class="subscribe-form">
+                                    <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                        <div id="mc_embed_signup_scroll" class="mc-form">
+                                            <input type="email" value="" name="EMAIL" class="email" placeholder="Your Email Address..." required>
+                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                            <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                            <div class="clear-2"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom pb-25 pt-25 gray-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            <p>Copyright © <a href="#">Online Floral Delivery</a>. All Right Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-img f-right">
+                            <a href="#">
+                                <img alt="" src="~/webContent/assets/img/icon-img/payment.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <!-- Thumbnail Large Image start -->
+                            <div class="tab-content">
+                                <div id="pro-1" class="tab-pane fade show active">
+                                    <img src="~/webContent/assets/img/product-details/product-detalis-l1.jpg" alt="">
+                                </div>
+                                <div id="pro-2" class="tab-pane fade">
+                                    <img src="~/webContent/assets/img/product-details/product-detalis-l2.jpg" alt="">
+                                </div>
+                                <div id="pro-3" class="tab-pane fade">
+                                    <img src="~/webContent/assets/img/product-details/product-detalis-l3.jpg" alt="">
+                                </div>
+                                <div id="pro-4" class="tab-pane fade">
+                                    <img src="~/webContent/assets/img/product-details/product-detalis-l4.jpg" alt="">
+                                </div>
+                            </div>
+                            <!-- Thumbnail Large Image End -->
+                            <!-- Thumbnail Image End -->
+                            <div class="product-thumbnail">
+                                <div class="thumb-menu owl-carousel nav nav-style" role="tablist">
+                                    <a class="active" data-toggle="tab" href="#pro-1"><img src="~/webContent/assets/img/product-details/product-detalis-s1.jpg" alt=""></a>
+                                    <a data-toggle="tab" href="#pro-2"><img src="~/webContent/assets/img/product-details/product-detalis-s2.jpg" alt=""></a>
+                                    <a data-toggle="tab" href="#pro-3"><img src="~/webContent/assets/img/product-details/product-detalis-s3.jpg" alt=""></a>
+                                    <a data-toggle="tab" href="#pro-4"><img src="~/webContent/assets/img/product-details/product-detalis-s4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <!-- Thumbnail image end -->
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <div class="modal-pro-content">
+                                <h3>Dutchman's Breeches </h3>
+                                <div class="product-price-wrapper">
+                                    <span class="product-price-old">£162.00 </span>
+                                    <span>£120.00</span>
+                                </div>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
+                                <div class="quick-view-select">
+                                    <div class="select-option-part">
+                                        <label>Size*</label>
+                                        <select class="select">
+                                            <option value="">S</option>
+                                            <option value="">M</option>
+                                            <option value="">L</option>
+                                        </select>
+                                    </div>
+                                    <div class="quickview-color-wrap">
+                                        <label>Color*</label>
+                                        <div class="quickview-color">
+                                            <ul>
+                                                <li class="blue">b</li>
+                                                <li class="red">r</li>
+                                                <li class="pink">p</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="product-quantity">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" type="text" name="qty" value="01">
+                                    </div>
+                                   
+                                      
+                                  
+                                        <button type="submit">Add to cart</button>
+                                    </div>
+                                    
+                                
+                                <span><i class="fa fa-check"></i> In stock</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+    <!-- all js here -->
+    <script src="~/webContent/assets/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="~/webContent/assets/js/popper.js"></script>
+    <script src="~/webContent/assets/js/bootstrap.min.js"></script>
+    <script src="~/webContent/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/webContent/assets/js/isotope.pkgd.min.js"></script>
+    <script src="~/webContent/assets/js/ajax-mail.js"></script>
+    <script src="~/webContent/assets/js/owl.carousel.min.js"></script>
+    <script src="~/webContent/assets/js/plugins.js"></script>
+    <script src="~/webContent/assets/js/main.js"></script>
+</body>
+<!-- Mirrored from demo.devitems.com/phuler-v4/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Aug 2020 07:21:50 GMT -->
+</html>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="floral_deliveryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="products" Relationship="Self.FK__product__product__267ABA7A" FromRole="category" ToRole="product" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="subj" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Precision="25" Scale="0" />
+    <Property Name="product_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="product_category_id" Type="Int32" />
+    <NavigationProperty Name="category" Relationship="Self.FK__product__product__267ABA7A" FromRole="product" ToRole="category" />
+    <NavigationProperty Name="carts" Relationship="floral_deliveryModel.FK__cart__cart_fk_pr__2E1BDC42" FromRole="product" ToRole="cart" />
+  </EntityType>
+  <EntityType Name="registeration">
+    <Key>
+      <PropertyRef Name="cus_id" />
+    </Key>
+    <Property Name="cus_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="F_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="L_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dob" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="P_No" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="carts" Relationship="floral_deliveryModel.FK__cart__cart_fk_re__2D27B809" FromRole="registeration" ToRole="cart" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="billinggs" Relationship="floral_deliveryModel.FK__billingg__bill_f__36B12243" FromRole="registeration" ToRole="billingg" />
+  </EntityType>
+  <Association Name="FK__product__product__267ABA7A">
+    <End Role="category" Type="Self.category" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="category_id" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="product_category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="floral_deliveryEntities8" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="contacts" EntityType="Self.contact" />
+    <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="registerations" EntityType="Self.registeration" />
+    <AssociationSet Name="FK__product__product__267ABA7A" Association="Self.FK__product__product__267ABA7A">
+      <End Role="category" EntitySet="categories" />
+      <End Role="product" EntitySet="products" />
+    </AssociationSet>
+    <EntitySet Name="carts" EntityType="floral_deliveryModel.cart" />
+    <AssociationSet Name="FK__cart__cart_fk_pr__2E1BDC42" Association="floral_deliveryModel.FK__cart__cart_fk_pr__2E1BDC42">
+      <End Role="product" EntitySet="products" />
+      <End Role="cart" EntitySet="carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cart__cart_fk_re__2D27B809" Association="floral_deliveryModel.FK__cart__cart_fk_re__2D27B809">
+      <End Role="registeration" EntitySet="registerations" />
+      <End Role="cart" EntitySet="carts" />
+    </AssociationSet>
+    <EntitySet Name="billinggs" EntityType="floral_deliveryModel.billingg" />
+    <AssociationSet Name="FK__billingg__bill_f__36B12243" Association="floral_deliveryModel.FK__billingg__bill_f__36B12243">
+      <End Role="registeration" EntitySet="registerations" />
+      <End Role="billingg" EntitySet="billinggs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="cart_id" />
+    </Key>
+    <Property Name="cart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cart_qty" Type="Int32" />
+    <Property Name="cart_fk_reg" Type="Int32" />
+    <Property Name="cart_fk_pro" Type="Int32" />
+    <NavigationProperty Name="product" Relationship="floral_deliveryModel.FK__cart__cart_fk_pr__2E1BDC42" FromRole="cart" ToRole="product" />
+    <NavigationProperty Name="registeration" Relationship="floral_deliveryModel.FK__cart__cart_fk_re__2D27B809" FromRole="cart" ToRole="registeration" />
+  </EntityType>
+  <Association Name="FK__cart__cart_fk_pr__2E1BDC42">
+    <End Type="floral_deliveryModel.product" Role="product" Multiplicity="0..1" />
+    <End Type="floral_deliveryModel.cart" Role="cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cart">
+        <PropertyRef Name="cart_fk_pro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cart__cart_fk_re__2D27B809">
+    <End Type="floral_deliveryModel.registeration" Role="registeration" Multiplicity="0..1" />
+    <End Type="floral_deliveryModel.cart" Role="cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="registeration">
+        <PropertyRef Name="cus_id" />
+      </Principal>
+      <Dependent Role="cart">
+        <PropertyRef Name="cart_fk_reg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="billingg">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bill_fk_reg" Type="Int32" />
+    <Property Name="bill_firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bill_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="registeration" Relationship="floral_deliveryModel.FK__billingg__bill_f__36B12243" FromRole="billingg" ToRole="registeration" />
+  </EntityType>
+  <Association Name="FK__billingg__bill_f__36B12243">
+    <End Type="floral_deliveryModel.registeration" Role="registeration" Multiplicity="0..1" />
+    <End Type="floral_deliveryModel.billingg" Role="billingg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="registeration">
+        <PropertyRef Name="cus_id" />
+      </Principal>
+      <Dependent Role="billingg">
+        <PropertyRef Name="bill_fk_reg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

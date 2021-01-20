@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "addtocart";
+    Layout = "~/Views/shared/webMasterPage.cshtml";
+}
+
+
+
+
+<!-- shopping-cart-area start -->
+<div class="cart-main-area pt-60 pb-65">
+    <div class="container">
+        @{
+            int amount = 0;
+            int total = 0;
+
+            <h3 class="page-title">Your cart items   <b class="text-success">  @TempData["orderd"]</b></h3>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <form action="#">
+                        <div class="table-content table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Product Name</th>
+                                        <th>Until Price</th>
+                                        <th>Qty</th>
+                                        <th>Subtotal</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @foreach (var item in ViewBag.a)
+                                    {
+                                        var p = new Online_floral_delivery.Models.floral_deliveryEntities8().products.ToList();
+
+                                        foreach (var pro in p)
+                                        {
+                                            if (item.c_id == pro.id)
+                                            {
+                                                amount = item.c_qty * Convert.ToInt32(pro.price);
+
+                                    <tr>
+                                        <td class="product-thumbnail">
+                                            <a href="#"><img src="~/img/@Url.Content(pro.product_image)" alt=""></a>
+                                        </td>
+                                        <td class="product-name"><a href="#">@pro.product_name </a></td>
+                                        <td class="product-price-cart"><span class="amount">@pro.price</span></td>
+                                        <td class="product-quantity">
+                                            <div class="pro-dec-cart">
+                                                <input class="cart-plus-minus-box" type="text" value="@item.c_qty" name="qtybutton">
+                                            </div>
+                                        </td>
+                                        <td class="product-subtotal">@amount</td>
+                                        <td class="product-remove">
+                                            
+                                            <a href="@Url.Action("removecart","frontend",new { id = item.c_id })"><i class="fa fa-times"></i></a>
+                                        </td>
+                                    </tr>
+
+                                            }
+                                        }
+                                        total += amount;
+                                        
+                                    <tr>
+                                        <td> </td>
+                                    </tr>
+                                    }
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="cart-shiping-update-wrapper">
+                                    <div class="cart-shiping-update">
+                                        <a href="@Url.Action("shop","fronend")">Continue Shopping</a>
+                                    </div>
+                                    <div class="cart-clear">
+                                        <button>Update Shopping Cart</button>
+                                        <a href="@Url.Action("removeall","frontend")">Clear Shopping Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <div class="row">
+                        
+                                                <div class="col-lg-4 col-md-12">
+                            <div class="grand-totall">
+                               
+                                 @if (Session["useremail"] != null)
+                                 {
+                                <h4 class="grand-totall-title">Grand Total  <span>Rs.@total</span></h4>
+                                using (Html.BeginForm("shopdone", "frontend", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="cart_fk_reg" value="@Session["id"]" />
+                                    <input type="submit" value="Confirm Your Order"  class="btn btn-dark"/>
+
+                                }
+                                 }
+                                 else
+                                 {
+                                       <h4 class="grand-totall-title">Grand Total  <span>Rs.@total</span></h4>
+                                         <h5 class=" text-dark">Please Login For Order                 <span></span> <a href="@Url.Action("login","frontend")" class="text-danger">     Click Here For Login</a> </h5>
+
+                                       
+                                 }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+</div>
+

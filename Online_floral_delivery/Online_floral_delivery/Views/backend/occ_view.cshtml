@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Online_floral_delivery.Models.category>
+
+@{
+    ViewBag.Title = "occ_view";
+    Layout = "~/Views/shared/masterpage.cshtml";
+}
+
+<h2>view</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.category_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.category_name)
+        </td>
+        <td> <a href="@Url.Action("occ_delete","backend",new {id = item.category_id })">Delete</a></td>
+
+        <td> <a href="@Url.Action("updateCategory","backend",new {id = item.category_id })">Update</a></td>
+
+        
+    </tr>
+}
+
+</table>

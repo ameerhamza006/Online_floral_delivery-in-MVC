@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Online_floral_delivery.Models.registeration>
+
+@{
+    ViewBag.Title = "adminlist";
+    Layout = "~/Views/shared/masterpage.cshtml";
+}
+
+<h2>adminlist</h2>
+<h5>@TempData["userdelet"]</h5>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.F_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.L_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.P_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.role)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.F_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.L_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.P_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.role)
+        </td>
+        <td>
+            <a href="@Url.Action("admindelete","backend")">Delete</a>
+          
+        </td>
+    </tr>
+}
+
+</table>

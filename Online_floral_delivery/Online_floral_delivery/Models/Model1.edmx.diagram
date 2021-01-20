@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2cbd67b555b14a378080f37783e81328" Name="Diagram1" ZoomLevel="114">
+        <EntityTypeShape EntityType="floral_deliveryModel.category" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="floral_deliveryModel.contact" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="floral_deliveryModel.product" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="floral_deliveryModel.registeration" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="floral_deliveryModel.FK__product__product__267ABA7A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="floral_deliveryModel.cart" Width="1.5" PointX="5.25" PointY="3.125" />
+        <AssociationConnector Association="floral_deliveryModel.FK__cart__cart_fk_pr__2E1BDC42" />
+        <AssociationConnector Association="floral_deliveryModel.FK__cart__cart_fk_re__2D27B809" />
+        <EntityTypeShape EntityType="floral_deliveryModel.billingg" Width="1.5" PointX="5" PointY="6.5" />
+        <AssociationConnector Association="floral_deliveryModel.FK__billingg__bill_f__36B12243" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

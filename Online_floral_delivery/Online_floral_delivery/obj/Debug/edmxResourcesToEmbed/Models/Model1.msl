@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="floral_deliveryModelStoreContainer" CdmEntityContainer="floral_deliveryEntities8">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="floral_deliveryModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="category_id" ColumnName="category id" />
+          <ScalarProperty Name="category_name" ColumnName="category name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contacts">
+      <EntityTypeMapping TypeName="floral_deliveryModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="subj" ColumnName="subj" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="floral_deliveryModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_name" ColumnName="product name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="product_image" ColumnName="product image" />
+          <ScalarProperty Name="product_category_id" ColumnName="product category id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registerations">
+      <EntityTypeMapping TypeName="floral_deliveryModel.registeration">
+        <MappingFragment StoreEntitySet="registeration">
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="cus_id" ColumnName="cus_id" />
+          <ScalarProperty Name="F_name" ColumnName="F_name" />
+          <ScalarProperty Name="L_name" ColumnName="L_name" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="P_No" ColumnName="P_No" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="carts">
+      <EntityTypeMapping TypeName="floral_deliveryModel.cart">
+        <MappingFragment StoreEntitySet="cart">
+          <ScalarProperty Name="cart_fk_pro" ColumnName="cart_fk_pro" />
+          <ScalarProperty Name="cart_fk_reg" ColumnName="cart_fk_reg" />
+          <ScalarProperty Name="cart_qty" ColumnName="cart_qty" />
+          <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="billinggs">
+      <EntityTypeMapping TypeName="floral_deliveryModel.billingg">
+        <MappingFragment StoreEntitySet="billingg">
+          <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+          <ScalarProperty Name="bill_payment" ColumnName="bill_payment" />
+          <ScalarProperty Name="bill_postcode" ColumnName="bill_postcode" />
+          <ScalarProperty Name="bill_address" ColumnName="bill_address" />
+          <ScalarProperty Name="bill_street" ColumnName="bill_street" />
+          <ScalarProperty Name="bill_country" ColumnName="bill_country" />
+          <ScalarProperty Name="bill_city" ColumnName="bill_city" />
+          <ScalarProperty Name="bill_email" ColumnName="bill_email" />
+          <ScalarProperty Name="bill_number" ColumnName="bill_number" />
+          <ScalarProperty Name="bill_lastname" ColumnName="bill_lastname" />
+          <ScalarProperty Name="bill_firstname" ColumnName="bill_firstname" />
+          <ScalarProperty Name="bill_fk_reg" ColumnName="bill_fk_reg" />
+          <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

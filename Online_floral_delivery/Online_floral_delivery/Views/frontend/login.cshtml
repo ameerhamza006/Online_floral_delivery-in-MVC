@@ -1,0 +1,70 @@
+﻿@model Online_floral_delivery.Models.registeration
+@{
+    ViewBag.Title = "login";
+    Layout = "~/Views/shared/webMasterPage.cshtml";
+}
+
+<div class="breadcrumb-area gray-bg">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a href="@Url.Action("Index","frontend")">Home</a></li>
+                <li class="active"> login / Register </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="login-register-area pt-70 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                       
+                        <a data-toggle="tab" href="#lg2" class="active">
+                            <h4> Login </h4>
+                        </a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane">
+                            <div class="login-form-container">
+                             
+                            </div>
+                        </div>
+
+                        <div id="lg2" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    @using (Html.BeginForm("login", "frontend", FormMethod.Post))
+                                    {
+
+                                        @Html.TextBoxFor(a => a.Email, new { @placeholder = "Email Address" })
+
+
+                                        @Html.PasswordFor(a => a.password, new { @placeholder = "Password" })
+
+
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+                                                <input type="checkbox">
+                                                <label>Remember me</label>
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                            <button type="submit"><span>Login</span></button>
+                                        </div>
+                                    }
+
+                                    @ViewBag.msg
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

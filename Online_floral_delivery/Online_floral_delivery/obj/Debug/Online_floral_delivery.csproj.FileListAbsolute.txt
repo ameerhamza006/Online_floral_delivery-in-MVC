@@ -1,0 +1,218 @@
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.dll.config
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.pdb
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.exe
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.exe.config
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.rsp
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.exe
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.exe.config
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.rsp
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.AppContext.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Console.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Compression.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Claims.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.ValueTuple.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.exe
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.exe.config
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.rsp
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\VBCSCompiler.exe
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Helpers.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Mvc.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Razor.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Razor.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Razor.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Razor.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Helpers.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Mvc.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csprojAssemblyReference.cache
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csproj.CoreCompileInputs.cache
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csproj.CopyComplete
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.pdb
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.SqlServer.dll
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.xml
+C:\Users\Rizwan Awan\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.SqlServer.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.dll.config
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.pdb
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.exe
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.exe.config
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.rsp
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.exe
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.exe.config
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.rsp
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.AppContext.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Console.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Compression.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Claims.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.ValueTuple.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.exe
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.exe.config
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.rsp
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\VBCSCompiler.exe
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.SqlServer.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Helpers.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Mvc.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Razor.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Deployment.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Razor.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.SqlServer.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Razor.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Deployment.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Razor.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Helpers.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Mvc.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csprojAssemblyReference.cache
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csproj.CoreCompileInputs.cache
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csproj.CopyComplete
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.dll
+C:\Users\serverpc\source\repos\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.pdb
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csprojAssemblyReference.cache
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.pdb
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.dll.config
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\Online_floral_delivery.pdb
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.exe
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.exe.config
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csc.rsp
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.exe
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.exe.config
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\csi.rsp
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.AppContext.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Console.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Compression.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Claims.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.ValueTuple.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.exe
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.exe.config
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\vbc.rsp
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\VBCSCompiler.exe
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.SqlServer.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Helpers.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Mvc.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Razor.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Deployment.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Razor.dll
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\EntityFramework.SqlServer.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Razor.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Deployment.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Webpages.Razor.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Helpers.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\System.Web.Mvc.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sameer\Desktop\web\Online_floral_delivery\Online_floral_delivery\obj\Debug\Online_floral_delivery.csproj.CopyComplete

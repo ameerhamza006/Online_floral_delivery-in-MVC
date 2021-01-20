@@ -1,0 +1,177 @@
+﻿@model  List<Online_floral_delivery.Models.product>
+@{
+    ViewBag.Title = "shop";
+    Layout = "~/Views/shared/webMasterPage.cshtml";
+}
+
+<div class="breadcrumb-area gray-bg">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a href="@Url.Action("Index","frontend")">Home</a></li>
+                <li class="active">Shop Grid Style </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="shop-page-area pt-75 pb-75">
+    <div class="container">
+        <div class="row flex-row-reverse">
+            <div class="col-lg-9">
+                <div class="banner-area pb-30">
+                    <a href="product-details.html"><img alt="" src="assets/img/banner/banner-49.jpg"></a>
+                </div>
+                <div class="shop-topbar-wrapper">
+                    <div class="shop-topbar-left">
+                        <ul class="view-mode">
+                            <li class="active"><a href="#product-grid" data-view="product-grid"><i class="fa fa-th"></i></a></li>
+                            <li><a href="#product-list" data-view="product-list"><i class="fa fa-list-ul"></i></a></li>
+                        </ul>
+                        <p>Showing 1 - 20 of 30 results  </p>
+                    </div>
+                    <div class="product-sorting-wrapper">
+                        <div class="product-shorting shorting-style">
+                            <label>View:</label>
+                            <select>
+                                <option value=""> 20</option>
+                                <option value=""> 23</option>
+                                <option value=""> 30</option>
+                            </select>
+                        </div>
+                        <div class="product-show shorting-style">
+                            <label>Sort by:</label>
+                            <select>
+                                <option value="">Default</option>
+                                <option value=""> Name</option>
+                                <option value=""> price</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+               
+                
+                <div class="grid-list-product-wrapper">
+                    <div class="product-grid product-view pb-20">
+                        <div class="row">
+                        @foreach(var item in Model)
+                        {
+                            <div class="product-width col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-wrapper">
+                                    <div class="product-img">
+                                        <a href="product-details.html">
+                                            <img alt="" src="~/img/@Url.Content(item.product_image)">
+                                        </a>
+                                        <span>-30%</span>
+                                        <div class="product-action">
+                                            <a class="action-wishlist" href="#" title="Wishlist">
+                                                <i class="icon-heart"></i>
+                                            </a>
+                                            <a class="action-cart" href="#" title="Add To Cart">
+                                                <i class="icon-handbag"></i>
+                                            </a>
+                                            <a class="action-compare" href="@Url.Action("shopdetail","frontend", new { id = item.id })">
+                                                <i class="icon-magnifier-add"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-center">
+                                        <h4>
+                                            <a href="product-details.html">Dutchman's Breeches</a>
+                                        </h4>
+                                        <div class="product-price-wrapper">
+                                            <span>$100.00</span>
+                                            <span class="product-price-old">$120.00 </span>
+                                        </div>
+                                    </div>
+                                    <div class="product-list-details">
+                                        <h4>
+                                            <a href="product-details.html">Dutchman's Breeches</a>
+                                        </h4>
+                                        <div class="product-price-wrapper">
+                                            <span>$100.00</span>
+                                            <span class="product-price-old">$120.00 </span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="shop-list-cart-wishlist">
+                                            <a href="#" title="Wishlist"><i class="icon-heart"></i></a>
+                                          
+                                            <a href="#" title="Add To Cart"><i class="icon-handbag"></i></a>
+
+                                            <a href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
+                                                <i class="icon-magnifier-add"></i>
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                   
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="shop-sidebar-wrapper gray-bg-7 shop-sidebar-mrg">
+                    <div class="shop-widget">
+                        <h4 class="shop-sidebar-title">Shop By Categories</h4>
+                        <div class="shop-catigory">
+                            <ul id="faq">
+                                <li>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#shop-catigory-1" aria-expanded="false" class="collapsed">Birthday Bouquets <i class="ion-ios-arrow-down"></i></a>
+                                    <ul id="shop-catigory-1" class="panel-collapse collapse" style="">
+                                        <li><a href="#">Aster</a></li>
+                                        <li><a href="#">Aubrieta</a></li>
+                                        <li><a href="#">Basket of Gold</a></li>
+                                        <li><a href="#">Bellflower</a></li>
+                                        <li><a href="#">Buttercup</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#shop-catigory-2" class="collapsed" aria-expanded="false">Bride's Bouquets<i class="ion-ios-arrow-down"></i></a>
+                                    <ul id="shop-catigory-2" class="panel-collapse collapse">
+                                        <li><a href="#">Calendula</a></li>
+                                        <li><a href="#">Carnation</a></li>
+                                        <li><a href="#">Castor Bean</a></li>
+                                        <li><a href="#">Catmint</a></li>
+                                        <li><a href="#">Chives</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#shop-catigory-3" class="collapsed" aria-expanded="false">Funeral Flowers <i class="ion-ios-arrow-down"></i></a>
+                                    <ul id="shop-catigory-3" class="panel-collapse collapse">
+                                        <li><a href="#">Cleome</a></li>
+                                        <li><a href="#">Columbine</a></li>
+                                        <li><a href="#">Coneflower</a></li>
+                                        <li><a href="#">Coreopsis</a></li>
+                                        <li><a href="#">Cosmos</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="#">Interior Decor</a> </li>
+                                <li> <a href="#">Wedding Decor</a></li>
+                                <li> <a href="#">Custom Orders</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shop-widget mt-40 shop-sidebar-border pt-35">
+                        <h4 class="shop-sidebar-title">Popular Tags</h4>
+                        <div class="shop-tags mt-25">
+                            <ul>
+                                <li><a href="#">Bouquet</a></li>
+                                <li><a href="#">Event</a></li>
+                                <li><a href="#">Gift</a></li>
+                                <li><a href="#">Joy</a></li>
+                                <li><a href="#">Love </a></li>
+                                <li><a href="#">Special</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

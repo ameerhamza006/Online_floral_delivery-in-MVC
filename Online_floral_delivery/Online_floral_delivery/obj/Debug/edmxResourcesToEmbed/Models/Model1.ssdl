@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="floral_deliveryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="billingg">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bill_fk_reg" Type="int" />
+    <Property Name="bill_firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_city" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_country" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_street" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_postcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_payment" Type="nvarchar" MaxLength="50" />
+    <Property Name="bill_date" Type="date" />
+  </EntityType>
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="cart_id" />
+    </Key>
+    <Property Name="cart_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cart_qty" Type="int" />
+    <Property Name="cart_fk_reg" Type="int" />
+    <Property Name="cart_fk_pro" Type="int" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="category id" />
+    </Key>
+    <Property Name="category id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="subj" Type="varchar" MaxLength="100" />
+    <Property Name="msg" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product name" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="numeric" Precision="25" Scale="0" />
+    <Property Name="product image" Type="varchar(max)" />
+    <Property Name="product category id" Type="int" />
+  </EntityType>
+  <EntityType Name="registeration">
+    <Key>
+      <PropertyRef Name="cus_id" />
+    </Key>
+    <Property Name="cus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="F_name" Type="varchar" MaxLength="50" />
+    <Property Name="L_name" Type="varchar" MaxLength="50" />
+    <Property Name="Dob" Type="date" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="P_No" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="role" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__billingg__bill_f__36B12243">
+    <End Role="registeration" Type="Self.registeration" Multiplicity="0..1" />
+    <End Role="billingg" Type="Self.billingg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="registeration">
+        <PropertyRef Name="cus_id" />
+      </Principal>
+      <Dependent Role="billingg">
+        <PropertyRef Name="bill_fk_reg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cart__cart_fk_pr__2E1BDC42">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="cart" Type="Self.cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cart">
+        <PropertyRef Name="cart_fk_pro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cart__cart_fk_re__2D27B809">
+    <End Role="registeration" Type="Self.registeration" Multiplicity="0..1" />
+    <End Role="cart" Type="Self.cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="registeration">
+        <PropertyRef Name="cus_id" />
+      </Principal>
+      <Dependent Role="cart">
+        <PropertyRef Name="cart_fk_reg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__product__267ABA7A">
+    <End Role="category" Type="Self.category" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="category id" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="product category id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="floral_deliveryModelStoreContainer">
+    <EntitySet Name="billingg" EntityType="Self.billingg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cart" EntityType="Self.cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="registeration" EntityType="Self.registeration" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__billingg__bill_f__36B12243" Association="Self.FK__billingg__bill_f__36B12243">
+      <End Role="registeration" EntitySet="registeration" />
+      <End Role="billingg" EntitySet="billingg" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cart__cart_fk_pr__2E1BDC42" Association="Self.FK__cart__cart_fk_pr__2E1BDC42">
+      <End Role="product" EntitySet="product" />
+      <End Role="cart" EntitySet="cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cart__cart_fk_re__2D27B809" Association="Self.FK__cart__cart_fk_re__2D27B809">
+      <End Role="registeration" EntitySet="registeration" />
+      <End Role="cart" EntitySet="cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product__product__267ABA7A" Association="Self.FK__product__product__267ABA7A">
+      <End Role="category" EntitySet="category" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
